@@ -1,3 +1,5 @@
-from src import nasho
+# from src import nasho
 
-nasho()
+from src.stringAndLists.main import in_a_sequence
+
+in_a_sequence()
