@@ -1,5 +1,5 @@
 # from src import nasho
 
-from src.stringAndLists.main import in_a_sequence
+from src.stringAndLists.main import get_size
 
-in_a_sequence()
+get_size()

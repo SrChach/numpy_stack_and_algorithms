@@ -66,3 +66,33 @@ def in_a_sequence():
 	in_tuple = ('cow', 'chicken', 'dog')
 	print("'cow' is in ", in_tuple, "? :", 'cow' in in_tuple)
 	print("'dog' not in ", in_tuple, 'dog' not in in_tuple)
+
+
+#------------------------------------------------------
+def iterating_in_items():
+	list_iterating = [12, 43, 2]
+	print('we print listed items as folowing: "for item in items"')
+	for item in list_iterating:
+		print(item)
+
+	print('we print an item with its index as following: "for index, item in enumerate(items)"')
+	list_with_index = (98, 43, 5)
+	for index, item in enumerate(list_with_index):
+		print('llave: ', index, ', valor:', item)
+
+#------------------------------------------------------
+def get_size():
+	sized_string = 'cinco'
+	print('sizeof string "cinco": ', len(sized_string))
+
+	sized_list = [ 22, 33, 11 ]
+	print('sizeof a list: ', len(sized_list))
+
+	sized_tuple = ( 1, 54 )
+	print('size of a tuple: ', len(sized_tuple))
+
+# min of string/list/tuple: min(variable)
+# Maximuum: max(variable)
+# sum (only numeric array or tuples): sum(arrayOrTuple)
+# Can be combined with slicing xD sum(array[ -2 :  ])
+# Can sort: sort(StringOrArrayOrTuple)
