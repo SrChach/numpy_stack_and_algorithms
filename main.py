@@ -1,5 +1,9 @@
-# from src import nasho
 
-from src.stringAndLists.main import get_size
+from src.stack.main import Stack
 
-get_size()
+stack = Stack()
+
+stack.push(12)
+stack.push(1)
+
+print(stack.size())
