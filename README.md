@@ -1,24 +1,17 @@
 # Data Structures and Algorithms in Python
 
-  - [Big O notation](#Big-O-notation)
-    - [Holis](#Holis)
-  - [Ejemplo](#Ejemplo)
+- [Big O notation](https://github.com/SrChach/python_data_structures/tree/temp/src/bigO#big-o-notation)
+	- [Time Complexity or Performance](https://github.com/SrChach/python_data_structures/tree/temp/src/bigO#introduction---performance-or-time-complexity)
+		1. [Big O runtimes](https://github.com/SrChach/python_data_structures/tree/temp/src/bigO#runtimes-of-common-big-o-functions)
+		2. [Which terms Big O measures?](https://github.com/SrChach/python_data_structures/tree/temp/src/bigO#which-terms-big-o-measures)
+		3. [Method summary](https://github.com/SrChach/python_data_structures/tree/temp/src/bigO#method-summary)
+	- [Space Complexity](https://github.com/SrChach/python_data_structures/tree/temp/src/bigO#introduction---space-complexity)
+- [Ejemplo](#Ejemplo-uno)
 
-## Big O notation
-
-An algorithm is simply an **procedure or formula for solving a problem**. But, due that into the computational world the *speed of execution* and the *memory usage* are too important, we need an efficient manner to measure this, independiently of each processor capacity and another factors.
-
-This is where *Big O notation* comes into action.
-
-**Big O** notation describes *how quickly runtime will grow relative to the input as the input get arbitrarily large*
-
-
-So, *Big O* measures the quantity of operations and assignments done by an algotithm.
-
-### Holis
+### Ejemplo uno
 
 ejkhrkhefkfhekhke jke hfk k fek ke fe k 
 
-## Ejemplo
+## Ejemplo dos
 
 un ejemplo shido \_\_pycache\_\_
