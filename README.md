@@ -6,11 +6,7 @@
 		2. [Which terms Big O measures?](https://github.com/SrChach/python_data_structures/tree/temp/src/bigO#which-terms-big-o-measures)
 		3. [Method summary](https://github.com/SrChach/python_data_structures/tree/temp/src/bigO#method-summary)
 	- [Space Complexity](https://github.com/SrChach/python_data_structures/tree/temp/src/bigO#introduction---space-complexity)
-    	1. [Examples of Space Complexity](https://github.com/SrChach/python_data_structures/tree/temp/src/bigO#examples-of-space-complexity)
-    	2. [We need to measure both!](https://github.com/SrChach/python_data_structures/tree/temp/src/bigO#we-need-measure-both-space-and-time-complexity)
-    	3. [Which is better to measure?](https://github.com/SrChach/python_data_structures/tree/temp/src/bigO#which-is-better)
-    	4. [Tradeoffs](https://github.com/SrChach/python_data_structures/tree/temp/src/bigO#tradeoffs-you-cannot-always-get-both)
-- [Example](#Ejemplo-uno)
+- [Ejemplo](#Ejemplo-uno)
 
 ### Ejemplo uno
 
