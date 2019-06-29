@@ -61,3 +61,39 @@ So, the steps to get the complexity of a function are:
 3. Simplify it as *n* grows arbitrarily large
 
 ## Introduction - Space Complexity
+
+In addition to Time Complexity, there's another term we want to measure: the used space in memory by the program. We call it *Space Complexity*.
+
+We'll use the same Big O notation ***O(argument)*** and its symbols for it but now what we want to do is to know how many space are our program occupy.
+
+## Examples of Space Complexity
+
+Let's have a look of how we measure Space Complexity.
+
+``` python
+def n_times_in_array(n):
+    new_array = []
+
+    for i in range(n): # Time Complexity: Linear, O(n) in function of "n", due to we're doing all in array "n" times
+        new_array.append('anything') # Space Complexity: It's O(n) too, because we're appending n times 'anything' to the array
+    
+    return new_array
+```
+
+In the last example, tough we're measuring Time Complexity, we also can get the measuring ***O()*** of space used, and casually gets the same result. Let's see another example.
+
+``` python
+def print_n_times(n):
+    for i in range(n):
+        print("Hi! :)")
+```
+
+Nota: Aunque su complejidad de tiempo sea "n", su complejidad de tamaño se queda en ***O(1)***
+
+
+## We need measure both Space and Time Complexity 
+
+## which is better?
+
+
+## Tradeoffs (You cannot always get both)
