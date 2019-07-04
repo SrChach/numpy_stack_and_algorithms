@@ -19,6 +19,8 @@ some_list = some_list + [ 5, 6 ]
 
 So, what's special about Numpy?
 
+# Vectors
+
 ## Vector Addition
 
 While "+" between arrays into Python means concatenation, in Numpy it means vector sum.
@@ -100,12 +102,12 @@ Note: working examples of Dot Product are [here](https://github.com/SrChach/nump
 One of the ways to get the dot product is using the formula 
 ![Producto_punto](../images/dot_product.png)
 
-In which we need to multiply all the posicion components of each vector, and then sum all the results, to get a escalar number. 
+In which we need to multiply all the posicion components of each vector, and then sum all the results, in order to get a scalar number. 
 
 First we need to get the multiplication of these vectors. Since vector multiplication gives us another vector, then we can sum the result in a simple way.
 
 ``` python
-multiplied_vector = A_vector * B_vector * C_vector
+multiplied_vector = A_vector * B_vector
 
 dot_result = numpy.sum(multiplied_vector)
 ```
@@ -155,3 +157,133 @@ angle = numpy.arccos( cos_of_the_angle )
 
 And we've got our angle!
 
+# Matrices
+
+Note: Examples of Matrices are [here](https://github.com/SrChach/numpy_stack_and_algorithms/blob/master/numpy/matrices.py)
+
+## Matrix definition
+
+Within Numpy, a Vector can be considered as a one-dimension array. And, as into another languages and frameworks, a Matrix is just a two-dimensional array. So we can think in a matrix as a two-dimensional vector.
+
+So, to summarize we're only talking about 1-D arrays and 2-D arrays. Or, we can also think in it as a list of lists.
+
+We can define a Numpy matrix in two ways (Notice that the inner arrays must have the same size).
+
+``` python
+# As an numpy array of arrays
+array_matrix = numpy.array([ [1, 2], [3, 4] ])
+
+# Or directly as a Matrix
+real_matrix = numpy.matrix([ [1, 2], [3, 4] ])
+```
+
+Same with the "same" result (there's a little difference between matrices and arrays in Numpy, but we can use the same operations in both).
+
+But the Numpy's official documentation recommends use arrays instead of matrices. So we'll try to convert all the matrices as possible into arrays, sometimes using following operation.
+
+``` python
+# Converting Matrix into matrix/array (recommended)
+matrix = numpy.array(real_matrix)
+```
+
+## Accessing to a Matrix element
+
+We can acces to a group or element of the matrix in two ways. Use the one you like.
+
+``` python
+# First form, as we're used to access to an element
+element = matrix[0][0]
+
+# and we can use something like Matlab's syntax
+element = matrix[0, 0]
+```
+
+## Generating arrays
+
+Sometimes we need to generate arrays. Long arrays, arrays with random elements... uff. So we need a quick way to do this.
+
+First form is create an array full of zeros in every position.
+
+```python
+number_of_zeros = 10
+
+# will return us an array of length "number_of_zeros"
+array_full_of_zeros = numpy.zeros( number_of_zeros )
+
+# Will return us an array of size 10 X 10, full of zeros
+# Notice the input still takes in one input, which is a tuple containing each dimension
+matrix_full_of_zeros = numpy.zeros( (10, 10) )
+
+# A similar function, but filling all the elements with "1"
+matrix_full_of_ones = numpy.ones( (10, 10) )
+```
+
+Another form is making a matrix with random elements, with different distributions.
+
+``` python
+# Generating an array with random numbers between 0 and 1
+random_matrix = numpy.random.random( (10, 10) )
+
+# We can also generate an array with random numbers, but in Gaussian Distribution 
+matrix_random_gaussian = numpy.random.randn  ( 10, 10 )
+```
+
+And, for each of these matrices, we can calculate its statistics, for example and taking the above matrix
+
+``` python
+# Getting the Mean of a matrix
+print("Mean of a given matrix: ", matrix_random_gaussian.mean()
+
+# Getting the Variance of a matrix
+print("Variance of a given matrix: ", matrix_random_gaussian.var())
+```
+
+## Matrix multiplication
+
+It's important to see that element by element multiplication is not the same that matrix multiplication. Where **element by element** multiplication formula is
+
+![element by element](../images/element_by_element.png)
+
+> Note: matrices to multiplicate must have **exactly** the same size
+
+and in Numpy is represented by an *asterisk*
+
+``` python
+result_matrix = A_matrix * B_matrix
+```
+
+It's not the same that Matrix Multiplication, that is defined by
+
+![matrix multiplication](../images/matrix_multiplication.png)
+
+and its represented in Numpy as *dot*.
+
+``` python
+result_matrix_multiplication = A_matrix.dot(B_matrix)
+```
+
+> Notice that *dot* between matrices, representing **matrix multiplication** has not the same effect that the *dot* between vectors, that represents **dot product**, even though they're represented by the same operation.
+
+Matrix multiplication has a special requirement, and that's that the inner dimensions of the two matrices you're multiplying must match. For example, look at the following two matrices.
+
+|Matrix|Size|
+|:---:|:--:|
+|A|2 X 3|
+|B|3 X 3|
+
+In this case, we can multiply *AB*, because it´s (2 X ***3)<--->(3*** X 3) and the inner values are equivalent *(3 = 3)*, but we can't multyply *BA* because they're (3 X ***3)<--->(2*** X 3), and its inner dimension isn't equivalent *(2 ≠ 3)*.
+
+This is because, the definition of matrix multiplication. Consider A and B as the matrices to multiply.
+
+![matrix multiplication](../images/matrix_multiplication.png)
+
+The above rule is due *(i, j)th* entry of *result_matrix* is the dot product of row **A(i, :)** and column **B(:, j)**.
+
+## More matrix operations
+
+
+
+
+
+
+[<< Back to Index](https://github.com/SrChach/python_data_structures#Index)

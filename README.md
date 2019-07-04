@@ -2,6 +2,9 @@
 
 *note: put the requirements to run all this examples, preferably in a Docker container*
 
+*note2: misssing links to the official documentation of each section*
+
+## Index
 
 - [Big O notation](https://github.com/SrChach/python_data_structures/tree/master/bigO#big-o-notation)
 	- [Time Complexity or Performance](https://github.com/SrChach/python_data_structures/tree/master/bigO#introduction---performance-or-time-complexity)
@@ -16,9 +19,15 @@
 - [Numpy](https://github.com/SrChach/python_data_structures/tree/master/numpy#Numpy-Basics)
 	- [Numpy Basics](https://github.com/SrChach/python_data_structures/tree/master/numpy#Numpy-Basics)
 		1. [Differences betwen Numpy and python arrays](https://github.com/SrChach/python_data_structures/tree/master/numpy#Differences-betwen-numpy-and-python-arrays)
-		2. [Vector Addition](https://github.com/SrChach/python_data_structures/tree/master/numpy#Vector-Addition)
-		3. [Multiplying vector by scalar](https://github.com/SrChach/python_data_structures/tree/master/numpy#Multiplying-vector-by-scalar)
-		4. [Other operations](https://github.com/SrChach/python_data_structures/tree/master/numpy#Other-operations)
-	- [Dot Product](https://github.com/SrChach/python_data_structures/tree/master/numpy#Dot-product)
-	- [Getting the normal](https://github.com/SrChach/python_data_structures/tree/master/numpy#Getting-the-normal-from-a-vector)
-	- [Getting the angle between vectors](https://github.com/SrChach/python_data_structures/tree/master/numpy#Getting-angle-between-two-vectors)
+	- [Vectors](https://github.com/SrChach/python_data_structures/tree/master/numpy#Vectors)
+		1. [Vector Addition](https://github.com/SrChach/python_data_structures/tree/master/numpy#Vector-Addition)
+		2. [Multiplying vector by scalar](https://github.com/SrChach/python_data_structures/tree/master/numpy#Multiplying-vector-by-scalar)
+		3. [Other operations](https://github.com/SrChach/python_data_structures/tree/master/numpy#Other-operations)
+    	4. [Dot Product](https://github.com/SrChach/python_data_structures/tree/master/numpy#Dot-product)
+    	5. [Getting the normal](https://github.com/SrChach/python_data_structures/tree/master/numpy#Getting-the-normal-from-a-vector)
+    	6. [Getting the angle between vectors](https://github.com/SrChach/python_data_structures/tree/master/numpy#Getting-angle-between-two-vectors)
+	- [Matrices](https://github.com/SrChach/python_data_structures/tree/master/numpy#Matrices)
+    	1. [Matrix definition](https://github.com/SrChach/python_data_structures/tree/master/numpy#Matrix-definition)
+    	2. [Accessing to a matrix element](https://github.com/SrChach/python_data_structures/tree/master/numpy#Accessing-to-a-Matrix-element)
+    	3. [Generating arrays](https://github.com/SrChach/python_data_structures/tree/master/numpy#Generating-arrays)
+    	4. [Matrix multiplication](https://github.com/SrChach/python_data_structures/tree/master/numpy#Matrix-multiplication)
