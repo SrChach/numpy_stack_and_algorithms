@@ -281,8 +281,7 @@ The above rule is due *(i, j)th* entry of *result_matrix* is the dot product of 
 
 ## More matrix operations
 
-
-
+this topic is pending for documenting
 
 
 

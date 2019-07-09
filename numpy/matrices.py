@@ -147,8 +147,26 @@ def eigen():
 	# this case, matrix has 100 samples and 3 features
 	X = np.random.randn(100, 3)
 
+	# Remember that to get the covariance from a matrix, you want to transpose it first
+	# Getting the Covariance of the matrix
+	transpose = X.T
+	covariance = np.cov(transpose)
+
+	print('Covariance:\n', covariance )
+
+	# Getting the shape to be sure that covariance is correct
+	# print("shape from the covariance\n", covariance.shape)
+
+	# There are two ways to get the eigenvalues and eigenvectors from a matrix(from its covariance)
+	# First way: (eigh is for simetric and Hermitian matrices)
+	eigen_result = np.linalg.eigh(covariance)
+
+	# Second way
+	eigen_result = np.linalg.eig(covariance)
+	print("eigenvalues and eigenvectors, respectively:\n", eigen_result)
+
 inner_and_outer_products()
 
-
+eigen()
 
 
