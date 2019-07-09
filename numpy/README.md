@@ -281,8 +281,55 @@ The above rule is due *(i, j)th* entry of *result_matrix* is the dot product of 
 
 ## More matrix operations
 
-this topic is pending for documenting
+this topic is pending for documenting, but not for coding
 
+## Resolving a Linear System
+
+The problem from a linear system is 
+
+> ***Ax = b***
+
+Where *A* is the matrix, *x* is the column vector we're trying to solve for, and *b* is a vector of numbers. 
+
+And the solution for this problem is multiply both sides by the inverse
+
+![solving linear system](../images/solving_linear_system.png)
+
+
+Resolving this is possible by assuming that *A* is a square matrix, meaning that if it's invertible, then *x* has an unique solution, or:
+
+- It's a system with D equations and D unknowns
+- *A* is DxD size, assume it is invertible
+- We have all the tools we need to solve already:
+  - matrix inverse
+  - matrix multiply (dot product)
+
+Then, to summarize we need to multiply the matrix's inverse in dot product by the vector.
+
+``` python
+# Defining matrix and vector from system
+matrix = numpy.array([
+		[1, 2],
+		[3, 4]	
+	])
+
+vector = numpy.array([1, 2])
+
+# getting the inverse of the matrix
+inverse = numpy.linalg.inv(matrix)
+
+# getting the result by using dot product
+solution = inverse.dot(vector)
+```
+
+Or we can resolve it by using the `solve` method.
+
+``` python
+#Getting the solution by using the "linalg.solve() method"
+solution = numpy.linalg.solve(matrix, vector)
+```
+
+> By speed and manage of errors, try to *always* use "solve" instead of inverse method.
 
 
 [<< Back to Index](https://github.com/SrChach/python_data_structures#Index)

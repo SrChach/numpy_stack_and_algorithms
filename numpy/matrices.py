@@ -68,9 +68,9 @@ def generating_arrays():
 
 # We can also pass probabilistic functions to matrices
 def calculate_statistics(matrix):
-	print("Matrix's mean: ", matrix.mean)
+	print("Matrix's mean: ", matrix.mean() )
 
-	print("Matrix vaiance: ", matrix.var())
+	print("Matrix vaiance: ", matrix.var() )
 
 
 matrix_random_gaussian = generating_arrays()
@@ -123,11 +123,11 @@ def inner_and_outer_products():
 	A_vector = np.array([1, 2])
 	B_vector = np.array([3, 4])
 
-	print('outer product between two vectors:\n', np.outer(A_vector, B_vector) )
+	print('outer product between two vectors:\n', np.outer(A_vector, B_vector), "\n" )
 	
 	# these two followings are the same
-	print('inner product between two vectors:\n', np.inner(A_vector, B_vector) )
-	print('another way to do the inner product:\n', A_vector.dot(B_vector) )
+	print('inner product between two vectors:\n', np.inner(A_vector, B_vector), "\n" )
+	print('another way to do the inner product:\n', A_vector.dot(B_vector), "\n" )
 
 # Matrix trace is the sum of the diagonals of the matrix
 def matrix_trace(matrix):
@@ -136,7 +136,7 @@ def matrix_trace(matrix):
 
 	# Or by directly use a built-in function
 	trace = np.trace(matrix)
-	print("trace of matrix: ", trace)
+	print("trace of matrix: ", trace, "\n")
 
 matrix_trace(matrix)
 
@@ -152,7 +152,7 @@ def eigen():
 	transpose = X.T
 	covariance = np.cov(transpose)
 
-	print('Covariance:\n', covariance )
+	print('Covariance:\n', covariance, "\n")
 
 	# Getting the shape to be sure that covariance is correct
 	# print("shape from the covariance\n", covariance.shape)
@@ -163,10 +163,34 @@ def eigen():
 
 	# Second way
 	eigen_result = np.linalg.eig(covariance)
-	print("eigenvalues and eigenvectors, respectively:\n", eigen_result)
+	print("eigenvalues and eigenvectors, respectively:\n", eigen_result, "\n")
 
 inner_and_outer_products()
 
 eigen()
 
+
+#--------------------- resolving a linear system -------------------
+
+A = np.array([
+		[1, 2],
+		[3, 4]	
+	])
+
+b = np.array([1, 2])
+
+def resolving_linear_system(matrix, vector):
+	# We can get the solution for a linear system by
+	# taking the inverse of the matrix and multiply it
+	# by the "output" vector
+	solution = np.linalg.inv(matrix).dot(vector)
+
+	# another form for solving a linear system is using the built-in function
+	# try to always use solve() and never the inverse method
+	solution = np.linalg.solve(matrix, vector)
+	return solution
+
+
+equation_resolved = resolving_linear_system(A, b)
+print("solution for the linear system:\n", equation_resolved, "\n")
 
