@@ -331,5 +331,42 @@ solution = numpy.linalg.solve(matrix, vector)
 
 > By speed and manage of errors, try to *always* use "solve" instead of inverse method.
 
+## A real example of linear equation solving
+
+Well, once obtained all these knowledge, we need to practice it by a real-world example. So, let's resolve a problem.
+
+> The admission fee at a small fair is $1.50 for children and $4.00 for adults. On a certain day, 2200 people enter the fair, and $5050 is collected. How many children and how many adults attended?
+
+We need first raise an equation to describe the problem. 
+Let's call the **number of children** as ***Ch*** and the **number of adults** as ***Ad***.
+
+``` python
+# This square of code is only an example, not runnable code
+
+# Between Childrens and Adults, it was an attendance of 2200 people.
+Ch + Ad = 2200
+
+# And collecting $1.50 by children and $4.00 by adult, there was $5050 dollars.
+(1.5 * Ch) + (4 * Ad) = 5050 
+```
+
+![Equations system](../images/equations_system.png)
+
+Two unknowns, two equations.
+
+So, let's plug this into Numpy and find the solution.
+
+``` python
+matrix = numpy.array([
+		[1, 1],
+		[1.5, 4]
+	])
+
+vector = numpy.array([2200, 5050])
+
+solution = np.linalg.solve(matrix, vector)
+```
+
+And that gives us the array **[1500, 700]** that means there was **1500 children** and **700 adults**.
 
 [<< Back to Index](https://github.com/SrChach/python_data_structures#Index)

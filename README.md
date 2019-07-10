@@ -31,3 +31,6 @@
     	2. [Accessing to a matrix element](https://github.com/SrChach/python_data_structures/tree/master/numpy#Accessing-to-a-Matrix-element)
     	3. [Generating arrays](https://github.com/SrChach/python_data_structures/tree/master/numpy#Generating-arrays)
     	4. [Matrix multiplication](https://github.com/SrChach/python_data_structures/tree/master/numpy#Matrix-multiplication)
+    	5. [More matrix operations](https://github.com/SrChach/python_data_structures/tree/master/numpy#More-matrix-operations)
+    	6. [Resolving a Linear system](https://github.com/SrChach/python_data_structures/tree/master/numpy#Resolving-a-Linear-System)
+    	7. [A real example of linear equation solving](https://github.com/SrChach/python_data_structures/tree/master/numpy#A-real-example-of-linear-equation-solving)

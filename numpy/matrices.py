@@ -194,3 +194,20 @@ def resolving_linear_system(matrix, vector):
 equation_resolved = resolving_linear_system(A, b)
 print("solution for the linear system:\n", equation_resolved, "\n")
 
+#------------------ resolving real life linear problem ----------------------
+
+# Resolution to the problem in "A real example of linear equation solving"
+
+# Ch + Ad = 2200 // Between Childrens and Adults, it was an attendance of 2200 people.
+# (1.5 * Ch) + (4 * Ad) = 5050 // And collecting $1.50 by children and $4.00 by adult, there was $5050 dollars.
+
+matrix_problem = np.array([
+		[1, 1],
+		[1.5, 4]
+	])
+
+vector_problem = np.array([2200, 5050])
+
+solution_problem = np.linalg.solve(matrix_problem, vector_problem)
+
+print("Solution to the problem:\n", solution_problem)
