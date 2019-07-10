@@ -34,3 +34,7 @@
     	5. [More matrix operations](https://github.com/SrChach/python_data_structures/tree/master/numpy#More-matrix-operations)
     	6. [Resolving a Linear system](https://github.com/SrChach/python_data_structures/tree/master/numpy#Resolving-a-Linear-System)
     	7. [A real example of linear equation solving](https://github.com/SrChach/python_data_structures/tree/master/numpy#A-real-example-of-linear-equation-solving)
+- [Pandas](https://github.com/SrChach/python_data_structures/tree/master/pandas#Pandas)
+	1. some pandas content
+
+
