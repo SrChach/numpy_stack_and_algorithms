@@ -1,8 +1,7 @@
 import numpy as np
 import pandas as pd
 
-## getting the data traditional way (no pandas)
-
+## getting the data traditional way (without pandas)
 def normal_get_from_csv():
 	array = []
 
@@ -17,23 +16,33 @@ def normal_get_from_csv():
 
 	return array
 
-# printing not the array but its sizes
-print("Getting data from CSV:", normal_get_from_csv().shape, "\n")
-
 # Getting data from CSV with Pandas
 def pandas_get_from_csv():
 	# We specify header:None to tell Pandas that the first row is not the header of the table 
-	array = pd.read_csv("data_2d.csv", header=None)
+	dataframe = pd.read_csv("data_2d.csv", header=None)
 
 	# Pandas return dataframes while reading from CSV
-	print("\nwhat type of dataType this returns?: ", type(array), "\n")
+	print("\nwhat type of dataType this returns?: ", type(dataframe), "\n")
 
-	return array
+	# getting dataframe info:
+	print(dataframe.info(), "\n")
+	print("preview of what's into the dataFrame:\n", dataframe.head(3))
 
-# note: In general, Pandas will try to use the most specific data type possible
-pandas_dataframe = pandas_get_from_csv()
+	return dataframe
 
-print("info from the CSV with Pandas:\n")
-print(pandas_dataframe.info(), "\n")
+# printing not the array but its sizes
+print("Getting data from CSV normal way:", normal_get_from_csv().shape, "\n")
 
-print("preview of what's in the dataFrame:\n", pandas_dataframe.head(3))
+# note: In general, Pandas will try to use the most specific data type possible while reading
+dataframe = pandas_get_from_csv()
+
+def dataframe_to_numpy_array(dataframe):
+	# Converting to a numpy array
+	numpy_array = dataframe.as_matrix()
+
+	# checking if converting was done
+	print( "\ntype of converted dataFrame: ", type(numpy_array) )
+
+dataframe_to_numpy_array(dataframe)
+
+
