@@ -35,6 +35,10 @@
     	6. [Resolving a Linear system](https://github.com/SrChach/python_data_structures/tree/master/numpy#Resolving-a-Linear-System)
     	7. [A real example of linear equation solving](https://github.com/SrChach/python_data_structures/tree/master/numpy#A-real-example-of-linear-equation-solving)
 - [Pandas](https://github.com/SrChach/python_data_structures/tree/master/pandas#Pandas)
-	1. some pandas content
+	- [What is Pandas](https://github.com/SrChach/python_data_structures/tree/master/pandas#What-is-pandas)
+	- [Dataframes](https://github.com/SrChach/python_data_structures/tree/master/pandas#Dataframes)
+    	1. [Exporting DataFrames to Numpy arrays](https://github.com/SrChach/python_data_structures/tree/master/pandas#Exporting-DataFrames-to-Numpy-arrays)
+    	2. [Accessing to data in DataFrames](https://github.com/SrChach/python_data_structures/tree/master/pandas#Accessing-to-data-in-DataFrames)
+    	3. [Getting specific information](https://github.com/SrChach/python_data_structures/tree/master/pandas#Getting-specific-information)
 
 
