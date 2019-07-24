@@ -122,3 +122,29 @@ condition_met = dataframe[ dataframe[0] < 5 ]
 
 and, like when we access to specific columns, we can do the same for rows.
 
+## Managing DataFrame columns
+
+### Changing column names
+
+When reading data from a CSV, sometimes we need to change it's original names because them could be very large or confusing.
+
+The syntax for achieving this is to pass an array with **exactly** the same name of elements that have the DataFrame as columns. Here's an example
+
+``` python
+# "dataframe" for this example is a DataFrame "with" 3 columns
+dataframe.columns = ["new_column_name_1", "new_column_name_2", "new_column_name_3"]
+```
+
+### Adding new columns
+
+And another times we need to add new columns into an existing DataFrame. We can add columns two ways.
+
+The first is adding a column and within it ALL the values will be the same.
+
+The syntax for it is passing the dataframe name and into square brackets the name of the new column. And equals it to the value that ALL the column will have.
+
+``` python
+# this will add a column named NEW_COLUMN_NAME, where all its values will be true 
+example_dataframe["NEW_COLUMN_NAME"] = True
+```
+
