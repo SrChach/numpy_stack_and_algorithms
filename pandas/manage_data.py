@@ -32,8 +32,26 @@ def adding_columns_based_on_actual_data(dataframe):
 	dataframe["date_object"] = dataframe.apply(lambda row: datetime.strptime(row["month"], "%Y-%m"), axis=1)
 	print("\nDataframe with a column with 'string-date' converted to 'datetime' object added:\n", dataframe.head())
 
+# This contains an example of doing a join between two dataframes
+def joins():
+	# Reading tables from the CSV's
+	table_1 = pd.read_csv("datasets/table1.csv")
+	table_2 = pd.read_csv("datasets/table2.csv")
+
+	print("\n\nPrinting the two tables we're gonna join:\n", table_1, "\n\n", table_2)
+
+	# Joining the two tables by a criteria (specified in "on")
+	# If you don't pass "on", it will merge by row index
+	#	table_1.merge(table_2, "user_id") also works
+	new_dataframe = pd.merge(table_1, table_2, on="user_id")
+
+	# In the case that first table index is different to second table index we can do
+	#	new_dataframe = pd.merge(table_1, table_2, left_on='TABLE_1_INDEX', right_on='TABLE_2_INDEX')
+
+	print("\ntable with the Join done:\n", new_dataframe)
+
 
 managing_columns(dataframe)
 adding_columns_based_on_actual_data(dataframe)
-
+joins()
 
