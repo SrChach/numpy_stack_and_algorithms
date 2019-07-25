@@ -148,3 +148,21 @@ The syntax for it is passing the dataframe name and into square brackets the nam
 example_dataframe["NEW_COLUMN_NAME"] = True
 ```
 
+The second way solves this question: What do we do if we want to assign a new column value based on the other data in its row?
+
+Here's when the *apply* function becomes on action.
+
+The basic syntax is as following
+
+> example_dataframe["NEW_COLUMN_NAME"] = example_dataframe.apply(get_interaction_function, axis=1)
+
+Where get_interaction_function is the function that we will pass to manage the data of current row. This function receives the row as argument and return a value that will be put into the new column. And "NEW_COLUMN_NAME" it's the column in where will be putted the result of that operation.
+
+An example. Suppose that "x1" and "x2" are columns with numbers
+
+``` python
+# This will get the DataFrame with a new column that contains the result of multiplicate the values into "x1" by "x2" 
+example_dataframe["multiplied"] = example_dataframe(lambda row: row["x1"] * row["x2"])
+```
+
+

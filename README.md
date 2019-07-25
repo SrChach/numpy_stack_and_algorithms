@@ -40,5 +40,8 @@
     	1. [Exporting DataFrames to Numpy arrays](https://github.com/SrChach/python_data_structures/tree/master/pandas#Exporting-DataFrames-to-Numpy-arrays)
     	2. [Accessing to data in DataFrames](https://github.com/SrChach/python_data_structures/tree/master/pandas#Accessing-to-data-in-DataFrames)
     	3. [Getting specific information](https://github.com/SrChach/python_data_structures/tree/master/pandas#Getting-specific-information)
+    	4. [Managing DataFrame columns](https://github.com/SrChach/python_data_structures/tree/master/pandas#Managing-DataFrame-columns)
+        	- [Changing column names](https://github.com/SrChach/python_data_structures/tree/master/pandas#Changing-column-names)
+        	- [Adding new columns](https://github.com/SrChach/python_data_structures/tree/master/pandas#Adding-new-columns)
 
 

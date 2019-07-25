@@ -7,7 +7,7 @@ def normal_get_from_csv():
 	array = []
 
 	# opening the file
-	for line in open("data_2d.csv"):
+	for line in open("datasets/data_2d.csv"):
 		row = line.split(',') # getting an array of strings of each row
 		sample = list( map(float, row) ) # Converting list into float numbers
 		array.append(sample)
@@ -21,7 +21,7 @@ def normal_get_from_csv():
 # Getting data from CSV with Pandas
 def pandas_get_from_csv():
 	# We specify header:None to tell Pandas that the first row is not the header of the table 
-	dataframe = pd.read_csv("data_2d.csv", header=None)
+	dataframe = pd.read_csv("datasets/data_2d.csv", header=None)
 
 	# Pandas return dataframes while reading from CSV
 	print("\nwhat type of dataType this returns?: ", type(dataframe), "\n")
