@@ -43,5 +43,13 @@
     	4. [Managing DataFrame columns](https://github.com/SrChach/python_data_structures/tree/master/pandas#Managing-DataFrame-columns)
         	- [Changing column names](https://github.com/SrChach/python_data_structures/tree/master/pandas#Changing-column-names)
         	- [Adding new columns](https://github.com/SrChach/python_data_structures/tree/master/pandas#Adding-new-columns)
+- [Matplotlib](https://github.com/SrChach/python_data_structures/tree/master/matplotlib#Matplotlib)
+  - [Line chart](https://github.com/SrChach/python_data_structures/tree/master/matplotlib#Line-chart)
+  	1. [Creating points for chart](https://github.com/SrChach/python_data_structures/tree/master/matplotlib#Creating-points-for-chart)
+  	2. [Assigning points to chart](https://github.com/SrChach/python_data_structures/tree/master/matplotlib#Assigning-points-to-chart)
+  	3. [Naming the chart and axes](https://github.com/SrChach/python_data_structures/tree/master/matplotlib#Naming-the-chart-and-axes)
+  	4. [Plotting](https://github.com/SrChach/python_data_structures/tree/master/matplotlib#Plotting)
+
+
 
 

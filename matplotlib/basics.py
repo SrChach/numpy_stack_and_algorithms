@@ -16,7 +16,7 @@ plt.plot(x_axis, y_axis)
 plt.xlabel("time")
 
 # Adding a name to Y coordinates
-plt.ylabel("some function")
+plt.ylabel("some function name")
 
 # Adding a customized name to chart 
 plt.title("My first chart")
