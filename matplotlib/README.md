@@ -2,11 +2,13 @@
 
 We've learned how to represent data and how to load data in from a file. Then we'll need how to look at our data visually. For this, we'll use Matplotlib, that is a library that allows us to easily make plots with Python.
 
-## Line chart
+## Creating a chart
 
 Before plotting, we need the points that we're gonna plot. That, for a line chart, means that we need both *X* axis and *Y* axis. Remember that for every point in *X* corresponds a point into *Y*.
 
-### Creating points for chart
+Example for printing a simple chart is [here](https://github.com/SrChach/numpy_stack_and_algorithms/blob/master/matplotlib/basics.py)
+
+### Creating points for a chart
 
 First we need to define from what point to what point we're plotting in both axis, and how many points are in the middle.
 
@@ -30,7 +32,16 @@ y_axis = numpy.sin(x_axis)
 
 ### Assigning points to chart
 
-Assigning points to chart is simple as
+There are some types of chart that we can do, now we can use various of this to print some types of charts.
+
+|Chart type|Method|
+|:---:|:---:|
+|Linear|matplotlib.plot(VALUES_X_AXIS, VALUES_Y_AXIS)|
+|Scatterplot|matplotlib.scatter(VALUES_X_AXIS, VALUES_Y_AXIS)|
+
+Both of them uses the same parameters, that are two arrays representing the coordinates into *X* axis and into *Y* axis.
+
+Assigning points to chart is simple as use one of these methods.
 
 ``` python
 # assigning coordinates to the plot
@@ -70,3 +81,26 @@ matplotlib.show()
 ```
 
 and yeah, that's all. Enjoy your chart.
+
+## Various charts in the same plot
+
+Now, what if we want to have more than one single chart into a plot, maybe for data comparison?
+
+Well, we can do it easily by calling another time `matplotlib.plot` or `matplotlib.scatter` with the desired conjunctions before show the plot.
+
+An example of this can be:
+
+``` python
+# We assume that our test sets are already defined
+
+# Creating a line chart
+matplotlib.plot(EXAMPLE_X_AXIS, EXAMPLE_Y_AXIS)
+
+# Adding a second chart
+matplotlib.scatter(EXAMPLE_X_AXIS_1, EXAMPLE_X_AXIS_2)
+
+# And then, just gonna plot all the charts defined previously
+matplotlib.show()
+```
+
+A running example of two charts within the same plot is [Here](https://github.com/SrChach/numpy_stack_and_algorithms/blob/master/matplotlib/scatterplot.py)
