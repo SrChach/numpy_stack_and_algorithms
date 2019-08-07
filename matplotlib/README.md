@@ -34,7 +34,13 @@ y_axis = numpy.sin(x_axis)
 
 There are some types of chart that we can do, now we can use various of this to print some types of charts.
 
-|Chart type|Method|
+Here's a description of some of the supported chart types:
+
+|Chart|Description|
+|:---:|:---|
+|Histogram|A discretized probability distribution of the data, or the frequency counts in each bucket of values (How many points of DATASET fall into each bucket)|
+
+|Chart|Method|
 |:---:|:---:|
 |Linear|matplotlib.plot(VALUES_X_AXIS, VALUES_Y_AXIS)|
 |Scatterplot|matplotlib.scatter(VALUES_X_AXIS, VALUES_Y_AXIS)|
